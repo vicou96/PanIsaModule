@@ -1,0 +1,40 @@
+<tool labels="text" id="fa_gc_content_1" name="Panisa on Genome" version="1.0">
+  <description>for each sequence in a file</description>
+  <command interpreter="python">panISa.py $input
+		
+	-q $alignmentQuality
+	-m $MinimunClipRead
+	-s $MaximunSizeRepeatRegion
+	-p $MinimunPercentageConsensus
+  -csv 
+  -o $output
+</command>
+  <inputs>
+    <param format="bam" name="input" type="data" label="Source file"/>
+
+    <param name="alignmentQuality" type="integer" value="20" label="Minimum alignment quality value to conserved a clip read"/>
+
+    <param name="MinimunClipRead" type="integer" value="5" label="Minimum number of clip read to look at IS on a position"/>
+
+    <param name="MaximunSizeRepeatRegion" type="integer" value="15" label="Maximum size of direct repeat region"/>
+    
+    <param name="MinimunPercentageConsensus" type="float" value="0.8" label="Minimum percentage of same base for create consensus "/>
+
+  </inputs>
+
+  <outputs>
+    <data format="csv" name="output" />
+  </outputs>
+
+  <tests>
+    <test>
+      <param name="input" value="fa_gc_content_input.fa"/>
+      <output name="out_file1" file="fa_gc_content_output.txt"/>
+    </test>
+  </tests>
+
+  <help>
+This tool computes GC content from a FASTA file.
+  </help>
+
+</tool>
