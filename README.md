@@ -29,11 +29,11 @@ Start by cloning the project under the folder tools, located in your main Galaxy
 
 Galaxy recognizes installed tools by reading the tool_conf.xml tool configuration file. Thus, letting Galaxy know about the new tool is as easy as adding a few lines to the tool_conf.xml file located in the config/ directory of the Galaxy installation. New tools can either be added to existing sections or added to new sections defined in the following way:
 
-`
- <section name="Panisa" id="mTools">
-    <tool file="panisa/panisa.xml" />
- </section>
-`
+
+`<section name="Panisa" id="mTools">`
+`    <tool file="panisa/panisa.xml" />`
+`</section>`
+
 
 ## Recommandation
 panISa works well with the alignment from **bwa** software.
