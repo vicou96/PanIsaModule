@@ -33,7 +33,8 @@ Galaxy recognizes installed tools by reading the tool_conf.xml tool configuratio
  <section name="Panisa" id="mTools">
     <tool file="panisa/panisa.xml" />
  </section>
-'
+`
+
 ## Recommandation
 panISa works well with the alignment from **bwa** software.
 
